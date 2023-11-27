@@ -25,5 +25,65 @@
   "author": {
     "name": "Filip Bech-Larsen",
     "email": "filipbech@filipbech.dk"
-  }
+  },
+  "flow": {
+    "actions": [
+      {
+        "title": {
+          "en": "Greet"
+        },
+        "args": [
+          {
+            "type": "text",
+            "name": "context",
+            "placeholder": {
+              "en": "world"
+            }
+          }
+        ],
+        "id": "greet"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "Room Temperature Controller"
+      },
+      "class": "heater",
+      "capabilities": [
+        "measure_battery",
+        "target_temperature",
+        "measure_temperature"
+      ],
+      "platforms": [
+        "local"
+      ],
+      "energy": {
+        "batteries": [
+          "AA"
+        ]
+      },
+      "connectivity": [],
+      "images": {
+        "small": "/drivers/room-temperature-controller/assets/images/small.png",
+        "large": "/drivers/room-temperature-controller/assets/images/small.png",
+        "xlarge": "/drivers/room-temperature-controller/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "room-temperature-controller"
+    }
+  ]
 }
