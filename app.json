@@ -7,44 +7,36 @@
   "platforms": [
     "local"
   ],
+  "brandColor": "#00a8e1",
   "name": {
     "en": "Wavin AHC 9000"
   },
   "description": {
-    "en": "Control your floor heating"
+    "en": "Control your heating floor by floor"
   },
   "category": [
     "climate"
   ],
   "permissions": [],
   "images": {
-    "small": "/assets/images/small.png",
-    "large": "/assets/images/large.png",
-    "xlarge": "/assets/images/xlarge.png"
+    "small": "/assets/images/small.jpg",
+    "large": "/assets/images/large.jpg"
   },
   "author": {
     "name": "Filip Bech-Larsen",
     "email": "filipbech@filipbech.dk"
   },
-  "flow": {
-    "actions": [
-      {
-        "title": {
-          "en": "Greet"
-        },
-        "args": [
-          {
-            "type": "text",
-            "name": "context",
-            "placeholder": {
-              "en": "world"
-            }
-          }
-        ],
-        "id": "greet"
+  "contributing": {
+    "donate": {
+      "githubSponsors": {
+        "username": "filipbech"
       }
-    ]
+    }
   },
+  "bugs": {
+    "url": "https://github.com/filipbech/com.wavin.ahc9000/issues"
+  },
+  "source": "https://github.com/filipbech/com.wavin.ahc9000",
   "drivers": [
     {
       "name": {
@@ -67,8 +59,7 @@
       "connectivity": [],
       "images": {
         "small": "/drivers/room-temperature-controller/assets/images/small.png",
-        "large": "/drivers/room-temperature-controller/assets/images/small.png",
-        "xlarge": "/drivers/room-temperature-controller/assets/images/small.png"
+        "large": "/drivers/room-temperature-controller/assets/images/large.png"
       },
       "pair": [
         {

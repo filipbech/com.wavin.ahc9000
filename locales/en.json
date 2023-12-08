@@ -1,1 +1,6 @@
-{}
+{
+    "settings": {
+        "title": "AHC9000 Settings",
+        "subtitle": "Please provide MQTT broker information"
+    }
+}
