@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Room Temperature Controller"
+    "en": "Room Thermostat"
   },
   "class": "heater",
   "capabilities": [

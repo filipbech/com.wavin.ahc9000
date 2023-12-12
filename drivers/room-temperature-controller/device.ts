@@ -13,16 +13,14 @@ export class AHC9000Device extends Homey.Device {
     await (this.driver as AHC9000Driver).driverReady;
 
     this.deviceData = this.getData();
-    const initialData = (this.driver as AHC9000Driver).devices[this.deviceData.deviceId][this.deviceData.floorId] as any;
-
+    const initialData = (this.driver as AHC9000Driver).devices[this.deviceData.deviceId]![this.deviceData.floorId]! as any | {};
 
     // Instantiate with initial data
-    
     setTimeout(_=> {
       Object.keys(initialData).forEach(key => {
         this.setCapabilityFromPropertyAndValue(key, initialData[key])
       });
-    },500);
+    }, 500);
 
     // send back new target_temperature to driver to publish
     this.registerCapabilityListener('target_temperature', async (value, opts) => {
